@@ -1,0 +1,92 @@
+@import '../../../assets/styles/index.scss';
+
+@mixin defaultOrderStyles {
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    height: 64px;
+    display: grid;
+    column-gap: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+
+    &:hover {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        transform: scale(1.01);
+    }
+}
+
+.operatorOrder {
+    @include defaultOrderStyles;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.adminOrder {
+    @include defaultOrderStyles;
+    grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 20px;
+}
+
+.iconContainer {
+    background-color: #000000;
+    height: 100%;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 20px;
+}
+
+.operatorStatus {
+    min-width: 135px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.adminStatus {
+    min-width: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.statusText {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -0.5px;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+.orderSection {
+    display: flex;
+    align-items: center;
+
+    &:nth-of-type(3) {
+        justify-content: center;
+    }
+}
+
+.orderText {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    color: $TEXT_SECONDARY_DARK;
+}

@@ -1,0 +1,42 @@
+.container {
+    overflow-y: scroll;
+    max-width: 100%;
+    height: calc(100vh - 40px - 39px - 28px - 109px);
+    margin-top: 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: 25px;
+    row-gap: 25px;
+    padding: 10px 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.historyItem {
+    border-bottom: 1px solid #393C49;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.status {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.time {
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 140%;
+    text-decoration: underline;
+}

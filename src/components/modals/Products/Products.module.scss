@@ -1,0 +1,61 @@
+@import "../../../assets/styles/index.scss";
+
+.productsModal {
+    width: calc(100% / 3);
+    border-radius: 8px 0 0 8px;
+    overflow: hidden;
+}
+
+.loader {
+    width: 100%;
+    height: calc(100vh - 110px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &__title {
+        margin-right: 20px;
+        font-size: 1.125rem;
+    }
+
+    &__input {
+        svg {
+            &:last-of-type {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.header_active {
+    .header__input {
+        input {
+            border: 1px solid transparent;
+            color: $TEXT_PRIMARY_LIGHT;
+        }
+    }
+}
+
+.products {
+    overflow-y: scroll;
+    height: calc(100vh - 110px);
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: 88px;
+    row-gap: 15px;
+    padding: 20px 0 5px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

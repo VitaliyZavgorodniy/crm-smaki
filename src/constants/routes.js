@@ -1,0 +1,13 @@
+export const ROOT = "/";
+export const LOGIN = `${ROOT}login`;
+export const ORDERS = `${ROOT}orders`;
+export const CLOSED_ORDERS = `${ROOT}closed-orders`;
+export const STATISTICS = `${ROOT}statistic`;
+export const STATISTICSDETAIL = `${ROOT}statistic/:id`;
+export const USERS = `${ROOT}users`;
+export const PRODUCTS = `${ROOT}products`;
+export const PRODUCT = `${PRODUCTS}/:id`;
+export const CALLCENTER = `${ROOT}callcenter`;
+export const COOK = `${ROOT}cook`;
+export const KITCHEN = `${ROOT}kitchen`;
+export const COURIER = `${ROOT}courier`;

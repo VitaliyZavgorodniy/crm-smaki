@@ -1,0 +1,33 @@
+.container {
+    border-top: 1px solid #393C49;
+    height: calc(100vh - 40px - 39px - 38px - 20px - 69px - 10px);
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-top: 20px;
+    padding-top: 20px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.radioGroup {
+    margin-bottom: 20px !important;
+}
+
+.inputsGroup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+}
+
+.input {
+    height: unset;
+    
+    & > div {
+        height: unset;
+    }
+}

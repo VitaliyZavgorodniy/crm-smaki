@@ -1,0 +1,79 @@
+@import "../../../assets/styles/index.scss";
+
+@mixin defaultTabStyles {
+    border: 1px solid #393c49;
+    padding: 4px 7px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:not(:last-of-type) {
+        margin-right: 7px;
+    }
+
+    &:hover {
+        background: $PRIMARY_ORANGE;
+
+        .tabs__tab__title {
+            user-select: none;
+            color: $TEXT_PRIMARY_LIGHT;
+        }
+    }
+
+    &__title {
+        font-size: 0.875rem;
+        color: $PRIMARY_ORANGE;
+        white-space: nowrap;
+        text-align: center;
+    }
+}
+
+.tabs {
+    display: flex;
+    // justify-content: space-between;
+    margin-top: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &__tab {
+        @include defaultTabStyles;
+
+        &_active {
+            @include defaultTabStyles;
+            background-color: $PRIMARY_ORANGE;
+
+            .tabs__tab__title {
+                color: $TEXT_PRIMARY_LIGHT;
+            }
+        }
+
+        &_disabled {
+            @include defaultTabStyles;
+            cursor: not-allowed;
+            opacity: 0.7;
+
+            .tabs__tab__title {
+                color: $DISABLED_TAB_TEXT;
+            }
+
+            &:hover {
+                background: transparent;
+
+                .tabs__tab__title {
+                    color: $DISABLED_TAB_TEXT;
+                }
+            }
+        }
+    }
+}
+
+.light {
+    border: 1px solid #DDDDDD;
+}

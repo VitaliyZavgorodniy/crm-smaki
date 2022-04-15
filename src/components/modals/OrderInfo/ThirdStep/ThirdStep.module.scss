@@ -1,0 +1,52 @@
+$CONTAINER_HEIGHT: calc(100vh - 40px - 39px - 38px - 109px);
+
+.container {
+    border-top: 1px solid #393C49;
+    overflow-y: scroll;
+    max-width: 100%;
+    height: $CONTAINER_HEIGHT;
+    margin-top: 10px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: 100px;
+    padding: 20px 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-top: 20px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.loader {
+    width: 100%;
+    height: $CONTAINER_HEIGHT;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datePicker {
+    height: 42px;
+    background-color: #2d303e;
+    border-radius: 10px;
+    padding: 0 10px;
+
+    & > div {
+        border: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    input {
+        color: #FFFFFF;
+        font-size: 14px;
+    }
+
+    svg {
+        stroke: #FFFFFF;
+    }
+}

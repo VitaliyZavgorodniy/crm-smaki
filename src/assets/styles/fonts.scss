@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@mixin font-100 {
+    font-weight: 100;
+}
+
+@mixin font-200 {
+    font-weight: 200;
+}
+
+@mixin font-300 {
+    font-weight: 300;
+}
+
+@mixin font-400 {
+    font-weight: 400;
+}
+
+@mixin font-500 {
+    font-weight: 500;
+}
+
+@mixin font-600 {
+    font-weight: 600;
+}
+
+@mixin font-700 {
+    font-weight: 700;
+}
+
+@mixin font-800 {
+    font-weight: 800;
+}
+
+@mixin font-900 {
+    font-weight: 900;
+}

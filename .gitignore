@@ -1,0 +1,8 @@
+node_modules/
+src/config.js
+scripts/deploy.sh
+.idea
+.DS_Store
+ignore
+.vscode
+.env

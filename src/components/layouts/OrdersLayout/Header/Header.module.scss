@@ -1,0 +1,98 @@
+@import "../../../../assets/styles/index.scss";
+
+@mixin defaultContentStyles {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: max-width 0.3s;
+}
+
+.header {
+    
+
+    &__left,
+    &__right {
+        @include defaultContentStyles;
+    }
+
+    &__title {
+        color: $TEXT_PRIMARY_DARK;
+        font-size: 28px;
+        white-space: nowrap;
+    }
+
+    &__date {
+        font-size: 16px;
+        color: $TEXT_SECONDARY_DARK;
+        margin-left: 20px;
+        white-space: nowrap;
+    }
+
+    &__button,
+    &__input {
+        height: 42px;
+    }
+
+    &__button {
+        font-size: 14px;
+        width: auto;
+        padding: 10px;
+
+        &:first-of-type {
+            margin-right: 25px;
+        }
+
+        &:last-of-type {
+            margin-left: 25px;
+        }
+    }
+
+    &__input {
+        svg {
+            &:last-of-type {
+                cursor: pointer;
+            }
+        }
+
+        input {
+            height: 42px;
+            padding: 0 15px 0 35px;
+            font-size: 14px;
+
+            &::placeholder {
+                font-size: 14px;
+            }
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+        }
+    }
+}
+
+.header_active {
+    .header__left {
+        @include defaultContentStyles;
+        max-width: 0;
+        overflow: hidden;
+        transition: max-width 0.1s;
+    }
+
+    .header__right {
+        @include defaultContentStyles;
+        width: 100%;
+    }
+
+    .header__button {
+        display: none;
+    }
+
+    .header__input {
+        input {
+            background: $PRIMARY_DARK;
+            border: 1px solid transparent;
+            color: $TEXT_PRIMARY_LIGHT;
+        }
+    }
+}

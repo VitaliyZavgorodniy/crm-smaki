@@ -1,0 +1,30 @@
+@import "../../../assets/styles/index.scss";
+
+@mixin defaultContainerStyles {
+    width: 100%;
+    min-height: 100%;
+    background: #1f1d2b;
+    position: relative;
+    z-index: 10000;
+    right: -100%;
+    transition: all 0.2s ease;
+    padding: 20px;
+}
+
+.base {
+    @include defaultContainerStyles;
+
+    &_active {
+        @include defaultContainerStyles;
+        right: 0;
+    }
+
+    &__bg {
+        position: fixed;
+        z-index: 0;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+}

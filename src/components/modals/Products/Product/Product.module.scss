@@ -1,0 +1,84 @@
+@import '../../../../assets/styles/index.scss';
+
+.container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #393C49;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.right {
+    min-width: 35px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $PRIMARY_ORANGE;
+    cursor: pointer;
+    transition: all .1s;
+    user-select: none;
+
+    &:hover {
+        min-width: 40px;
+    }
+}
+
+.imageContainer {
+    min-width: 68px;
+    max-width: 68px;
+    min-height: 68px;
+    max-height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text {
+    height: 68px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title,
+.description,
+.price {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.title,
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.description {
+    color: #AAAAAA;
+}
+
+.price {
+    color: #ABBBC2;
+}
+
+.image {
+    min-height: 68px;
+    max-height: 68px;
+}

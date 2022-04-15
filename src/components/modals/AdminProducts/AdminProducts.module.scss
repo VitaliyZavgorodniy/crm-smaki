@@ -1,0 +1,39 @@
+@import "../../../assets/styles/index.scss";
+
+.productsModal {
+    width: calc(100% / 3);
+    border-radius: 8px 0 0 8px;
+    overflow: hidden;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: 100px;
+    row-gap: 20px;
+    overflow-y: scroll;
+    height: calc(100vh - 99px);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.productsHeader {
+    display: grid;
+    grid-template-columns: 1fr 48px;
+    column-gap: 10px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.productsHeaderTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    white-space: nowrap;
+}
